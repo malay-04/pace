@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/text"
+            android:layout_width="256dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="400dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Mode"
+                android:layout_width="85.33dp"
+                android:layout_height="57.14dp"
+                android:text="Mode"
+                android:textAllCaps="true"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_marginTop="57.14dp"
+                android:layout_marginBottom="57.14dp"
+
+                android:background="@drawable/border"
+                />
+
+            <TextView
+                android:id="@+id/Rate"
+                android:layout_width="85.33dp"
+                android:layout_height="57.14dp"
+                android:text="Rate"
+                android:textAllCaps="true"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_marginBottom="57.14dp"
+                />
+
+            <TextView
+                android:id="@+id/AV"
+                android:layout_width="85.33dp"
+                android:layout_height="57.14dp"
+                android:text="AV"
+                android:textAllCaps="true"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_marginBottom="57.14dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/spinner"
+            android:layout_width="256dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="400dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:textAllCaps="true"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_marginTop="57.14dp"
+                android:layout_marginBottom="57.14dp"
+                android:background="@drawable/border"
+                />
+
+            <Spinner
+                android:id="@+id/rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:textAllCaps="true"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_marginBottom="57.14dp"
+                />
+
+            <Spinner
+                android:id="@+id/av"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:textAllCaps="true"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_marginBottom="57.14dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/range"
+            android:layout_width="256dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="400dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Amplitude"
+                android:layout_width="120dp"
+                android:layout_height="44.44dp"
+                android:text="Amplitude"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_marginTop="44.44dp"
+                android:layout_marginBottom="44.44dp"
+                />
+
+            <TextView
+                android:id="@+id/PW"
+                android:layout_width="120dp"
+                android:layout_height="44.44dp"
+                android:text="PW"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_marginBottom="44.44dp"/>
+
+            <TextView
+                android:id="@+id/Sensitivity"
+                android:layout_width="120dp"
+                android:layout_height="44.44dp"
+                android:text="Sensitivity"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_marginBottom="44.44dp"/>
+
+            <TextView
+                android:id="@+id/Refractory"
+                android:layout_width="120dp"
+                android:layout_height="44.44dp"
+                android:text="Refractory"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_marginBottom="44.44dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/A"
+            android:layout_width="256dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="400dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/a_amp"
+                android:layout_width="match_parent"
+                android:layout_height="44.44dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="44.44dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp">
+
+                <Button
+                    android:id="@+id/decrease_a_amp"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="decreaseInteger"
+                    android:padding="0dp"
+                    android:text="-" />
+
+                <TextView
+                    android:id="@+id/integer_a_amp"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:gravity="center"
+                    android:padding="0dp"
+                    android:text="0"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/increase_a_amp"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="increaseInteger"
+                    android:padding="0dp"
+                    android:text="+" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/a_pw"
+                android:layout_width="match_parent"
+                android:layout_height="44.44dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="44.44dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+
+                android:padding="0dp">
+
+                <Button
+                    android:id="@+id/decrease_a_pw"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="decreaseInteger"
+                    android:padding="0dp"
+                    android:text="-" />
+
+                <TextView
+                    android:id="@+id/integer_a_pw"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:gravity="center"
+                    android:padding="0dp"
+                    android:text="0"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/increase_a_pw"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="increaseInteger"
+                    android:padding="0dp"
+                    android:text="+" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/a_sens"
+                android:layout_width="match_parent"
+                android:layout_height="44.44dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="44.44dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+
+                android:padding="0dp">
+
+                <Button
+                    android:id="@+id/decrease_a_sens"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="decreaseInteger"
+                    android:padding="0dp"
+                    android:text="-" />
+
+                <TextView
+                    android:id="@+id/integer_a_sens"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:gravity="center"
+                    android:padding="0dp"
+                    android:text="0"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/increase_a_sens"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="increaseInteger"
+                    android:padding="0dp"
+                    android:text="+" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/a_refrac"
+                android:layout_width="match_parent"
+                android:layout_height="44.44dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="44.44dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+
+                android:padding="0dp">
+
+                <Button
+                    android:id="@+id/decrease_refrac"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="decreaseInteger"
+                    android:padding="0dp"
+                    android:text="-" />
+
+                <TextView
+                    android:id="@+id/integer_refrac"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:gravity="center"
+                    android:padding="0dp"
+                    android:text="0"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/increase_a_refrac"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="increaseInteger"
+                    android:padding="0dp"
+                    android:text="+" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/V"
+            android:layout_width="256dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="400dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/v_amp"
+                android:layout_width="match_parent"
+                android:layout_height="44.44dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="44.44dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+
+                android:padding="0dp">
+
+                <Button
+                    android:id="@+id/decrease_v_amp"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="decreaseInteger"
+                    android:padding="0dp"
+                    android:text="-" />
+
+                <TextView
+                    android:id="@+id/integer_v_amp"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:gravity="center"
+                    android:padding="0dp"
+                    android:text="0"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/increase_v_amp"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="increaseInteger"
+                    android:padding="0dp"
+                    android:text="+" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/v_pw"
+                android:layout_width="match_parent"
+                android:layout_height="44.44dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="44.44dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+
+                android:padding="0dp">
+
+                <Button
+                    android:id="@+id/decrease_v_pw"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="decreaseInteger"
+                    android:padding="0dp"
+                    android:text="-" />
+
+                <TextView
+                    android:id="@+id/integer_v_pw"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:gravity="center"
+                    android:padding="0dp"
+                    android:text="0"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/increase_v_pw"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="increaseInteger"
+                    android:padding="0dp"
+                    android:text="+" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/v_sens"
+                android:layout_width="match_parent"
+                android:layout_height="44.44dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="44.44dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+
+                android:padding="0dp">
+
+                <Button
+                    android:id="@+id/decrease_v_sens"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="decreaseInteger"
+                    android:padding="0dp"
+                    android:text="-" />
+
+                <TextView
+                    android:id="@+id/integer_v_sens"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:gravity="center"
+                    android:padding="0dp"
+                    android:text="0"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/increase_sens"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="increaseInteger"
+                    android:padding="0dp"
+                    android:text="+" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/v_refrac"
+                android:layout_width="match_parent"
+                android:layout_height="44.44dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="44.44dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+
+                android:padding="0dp">
+
+                <Button
+                    android:id="@+id/decrease_v_refrac"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="decreaseInteger"
+                    android:padding="0dp"
+                    android:text="-" />
+
+                <TextView
+                    android:id="@+id/integer_v_refrac"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:gravity="center"
+                    android:padding="0dp"
+                    android:text="0"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/increase_v_refrac"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="increaseInteger"
+                    android:padding="0dp"
+                    android:text="+" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
