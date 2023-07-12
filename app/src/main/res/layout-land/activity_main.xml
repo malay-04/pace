@@ -122,7 +122,7 @@
                 android:id="@+id/Amplitude"
                 android:layout_width="120dp"
                 android:layout_height="44.44dp"
-                android:text="Amplitude"
+                android:text="Amp"
                 android:textAlignment="center"
                 android:gravity="center"
                 android:layout_marginTop="44.44dp"
